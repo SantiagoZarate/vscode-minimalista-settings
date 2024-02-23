@@ -1,0 +1,16 @@
+{
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": [
+      "export function $TM_FILENAME_BASE(){",
+      "  return (",
+      "    <div>",
+      "      $2",
+      "    </div>",
+      "  )",
+      "}",
+      "",
+    ],
+    "description": "React Functional Component"
+  }
+}
