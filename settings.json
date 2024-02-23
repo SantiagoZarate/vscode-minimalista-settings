@@ -34,7 +34,9 @@
     ".monaco-workbench .part.editor>.content .editor-group-container>.title>.tabs-and-actions-container": "--tabs-border-bottom-color: transparent!important",
     ".monaco-workbench .part.titlebar": "border-bottom : none!important;",
     "div .monaco-editor .minimap": "background-color: red!important;",
-    ".monaco-editor": "left:-20px!important"
+    ".monaco-editor": "left:-20px!important",
+    // CURSOR GLOW
+    ".cursor": "box-shadow : 0 0 10px white, 0 0 10px white  !important;"
   },
   "workbench.layoutControl.enabled": false,
   "explorer.fileNesting.enabled": true,
