@@ -30,9 +30,11 @@
     ".pane-header": "padding : 0px 8px",
     ".actions-container": "justify-content: flex-start !important;",
     // SACANDO BORDES MANUALMENTE
-    ".monaco-workbench .part" : "border-right: none!important",
-    ".monaco-workbench .part.editor>.content .editor-group-container>.title>.tabs-and-actions-container" : "--tabs-border-bottom-color: transparent!important",
-    ".monaco-workbench .part.titlebar" : "border-bottom : none!important"
+    ".monaco-workbench .part": "border-right: none!important;",
+    ".monaco-workbench .part.editor>.content .editor-group-container>.title>.tabs-and-actions-container": "--tabs-border-bottom-color: transparent!important",
+    ".monaco-workbench .part.titlebar": "border-bottom : none!important;",
+    "div .monaco-editor .minimap": "background-color: red!important;",
+    ".monaco-editor": "left:-20px!important"
   },
   "workbench.layoutControl.enabled": false,
   "explorer.fileNesting.enabled": true,
@@ -69,5 +71,8 @@
       "(?:'|\"|`)([^']*)(?:'|\"|`)"
     ]
   ],
-  "editor.minimap.enabled": false
+  "window.zoomLevel": -1,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.iconTheme": "symbols", // **,
+  "breadcrumbs.enabled": false,
 }
