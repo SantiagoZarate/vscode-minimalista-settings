@@ -1,22 +1,16 @@
 {
-  "symbols.hidesExplorerArrows": false,
-  "editor.fontFamily": "JetBrains Mono",
   "editor.fontSize": 14,
   "editor.lineHeight": 1.8,
-  // "editor.rulers": [
-  //   80
-  // ],
   "editor.minimap.maxColumn": 60,
   "editor.minimap.renderCharacters": false,
-  "editor.renderLineHighlight": "gutter",
   "workbench.editor.labelFormat": "short",
   "explorer.compactFolders": false,
   "editor.semanticHighlighting.enabled": false,
-  "workbench.activityBar.location": "hidden",
+  // "workbench.activityBar.location": "hidden",
   "editor.scrollbar.vertical": "hidden",
-  "workbench.statusBar.visible": false,
   "apc.electron": {
     "titleBarStyle": "hiddenInset",
+    "frame": false
   },
   "apc.header": {
     "height": 36
@@ -24,57 +18,126 @@
   "apc.listRow": {
     "height": 24
   },
+  "window.titleBarStyle": "native",
   "apc.stylesheet": {
-    ".title-label > h2": "display  : none;",
-    ".editor-actions": "display : none;",
+    // ".title-label > h2": "display  : none;",
+    // ".editor-actions": "display : none;",
     ".pane-header": "padding : 0px 8px",
     ".actions-container": "justify-content: flex-start !important;",
     // SACANDO BORDES MANUALMENTE
-    ".monaco-workbench .part": "border-right: none!important;",
+    ".monaco-workbench .part": "border-right: none!important; height: 100%!important",
     ".monaco-workbench .part.editor>.content .editor-group-container>.title>.tabs-and-actions-container": "--tabs-border-bottom-color: transparent!important",
     ".monaco-workbench .part.titlebar": "border-bottom : none!important;",
-    "div .monaco-editor .minimap": "background-color: red!important;",
-    ".monaco-editor": "left:-20px!important",
     // CURSOR GLOW
-    ".cursor": "box-shadow : 0 0 10px white, 0 0 10px white  !important;"
+    ".cursor": "box-shadow : 0 0 10px white, 0 0 10px white  !important;",
+    // LINUX REMOVE TOP BAR
+    // ".part.titlebar": "display : none!important;",
+    // ".split-view-container > .split-view-view:nth-child(3),.split-view-container > .split-view-view:nth-child(2)": "top: 0px!important;",
+    // Remove Minimap Shadow and add border
+    ".minimap-shadow-visible": "height: 0 !important;",
+    ".minimap": "border-left: 1px solid var(--vscode-widget-border);",
+    // Saturate text
+    ".mtk10": "color: #5cdcfe !important;",
+    ".mtk18": "color: #f586f0 !important;",
+    ".mtk17": "color: #4ef9c0 !important;"
+  },
+  "editor.renderLineHighlight": "all",
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#fafafa11",
+    "editor.lineHighlightBorder": "#00000000"
   },
   "workbench.layoutControl.enabled": false,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
-    "package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-lock*, package-lock*, bun.lock*",
-    "tailwind.config*": "tailwind.config*, postcss.config*",
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-lock*, package-lock*, bun.lock*, commitlint.*, .prettierrc.*, components.json",
+    "tailwind.config*": "tailwind.config*, postcss.config*, next*",
     ".env.local": ".env*",
-    ".env*": ".env*"
+    ".env*": ".env*",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
   },
   "editor.cursorBlinking": "expand",
   "editor.cursorSmoothCaretAnimation": "on",
   "workbench.iconTheme": "symbols",
-  "window.zoomLevel": -1,
   "git.openRepositoryInParentFolders": "never",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.linkedEditing": true,
   "terminal.integrated.env.windows": {},
-  "editor.tabSize": 2,
   "editor.detectIndentation": false,
-  "indentRainbow.lightIndicatorStyleLineWidth": 6,
-  "indentRainbow.colorOnWhiteSpaceOnly": true,
   "workbench.tree.enableStickyScroll": true,
   "editor.stickyScroll.enabled": true,
   // Class Variance Autority - tailwindcss intellisense
   "tailwindCSS.experimental.classRegex": [
-    [
-      "cva\\(([^)]*)\\)",
-      "[\"'`]([^\"'`]*).*?[\"'`]"
-    ],
-    [
-      "cx\\(([^)]*)\\)",
-      "(?:'|\"|`)([^']*)(?:'|\"|`)"
-    ]
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
-  "window.zoomLevel": -1,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "workbench.iconTheme": "symbols", // **,
-  "breadcrumbs.enabled": false,
+  "editor.fontFamily": "Geist Mono",
+  "window.autoDetectColorScheme": true,
+  "window.commandCenter": false,
+  "window.title": "${activeEditorShort}",
+  "symbols.hidesExplorerArrows": false,
+  "editor.cursorSurroundingLines": 100,
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": "always"
+  },
+  "[go]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "golang.go"
+  },
+  "gopls": {
+    "verboseOutput": true,
+    "ui.semanticTokens": true
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "go.formatTool": "gofmt",
+  "go.editorContextMenuCommands": {
+    "fillStruct": true
+  },
+  "go.inlayHints.compositeLiteralFields": true,
+  "go.inlayHints.assignVariableTypes": true,
+  "go.inlayHints.constantValues": true,
+  "go.inlayHints.compositeLiteralTypes": true,
+  "go.inlayHints.parameterNames": true,
+  "go.inlayHints.rangeVariableTypes": true,
+  "workbench.editor.pinnedTabSizing": "compact",
+  "editor.tabSize": 2,
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "playwright.showTrace": true,
+  "playwright.reuseBrowser": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.sideBar.location": "right",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "terminal.integrated.env.linux": {},
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "editor.formatOnSave": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "editor.formatOnSave": false
+  },
+  "workbench.activityBar.location": "hidden"
 }
