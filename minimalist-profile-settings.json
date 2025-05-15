@@ -1,0 +1,159 @@
+{
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.8,
+  "editor.minimap.maxColumn": 60,
+  "workbench.editor.labelFormat": "default",
+  "explorer.compactFolders": false,
+  "editor.semanticHighlighting.enabled": false,
+  "editor.scrollbar.vertical": "hidden",
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "frame": false
+  },
+  "apc.header": {
+    "height": 36
+  },
+  "apc.listRow": {
+    "height": 24
+  },
+  "window.titleBarStyle": "native",
+  "apc.stylesheet": {
+    ".pane-header": "padding : 0px 8px",
+    // SACANDO BORDES MANUALMENTE
+    ".monaco-workbench .part": "border-right: none!important; height: 100%!important",
+    ".sidebar": "border-left: 1px solid hsl(0deg,0%,10%) !important;",
+    // ".monaco-workbench .part.editor>.content .editor-group-container>.title>.tabs-and-actions-container": "--tabs-border-bottom-color: transparent!important",
+    ".monaco-workbench .part.titlebar": "border-bottom : none!important;",
+    // CURSOR GLOW
+    ".cursor": "box-shadow : 0 0 10px white, 0 0 10px white  !important;",
+    ".minimap-shadow-visible": "height: 0 !important;",
+    ".minimap": "border-left: 1px solid var(--vscode-widget-border);",
+    // Saturate text
+    ".mtk10": "color: #5cdcfe !important;",
+    ".mtk18": "color: #f586f0 !important;",
+    ".mtk17": "color: #4ef9c0 !important;"
+  },
+  "editor.renderLineHighlight": "all",
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#fafafa11",
+    "editor.lineHighlightBorder": "#00000000"
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-lock*, package-lock*, bun.lock*, commitlint.*, .prettierrc.*, components.json",
+    "tailwind.config*": "tailwind.config*, postcss.config*, next*",
+    ".env.local": ".env*",
+    ".env*": ".env*",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.iconTheme": "symbols",
+  "git.openRepositoryInParentFolders": "never",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.linkedEditing": true,
+  "terminal.integrated.env.windows": {},
+  "editor.detectIndentation": false,
+  "workbench.tree.enableStickyScroll": true,
+  "editor.stickyScroll.enabled": true,
+  // Class Variance Autority - tailwindcss intellisense
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.fontFamily": "Geist Mono",
+  "window.autoDetectColorScheme": true,
+  "window.title": "${activeEditorShort}",
+  "symbols.hidesExplorerArrows": false,
+  "editor.cursorSurroundingLines": 100,
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": "always",
+    "source.organizeImports": "always",
+    "quickfix.biome": "explicit"
+  },
+  "workbench.editor.pinnedTabSizing": "compact",
+  "editor.tabSize": 2,
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "playwright.showTrace": true,
+  "playwright.reuseBrowser": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "workbench.sideBar.location": "right",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "terminal.integrated.env.linux": {},
+
+  "editor.formatOnSave": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "editor.formatOnSave": false
+  },
+  "editor.minimap.renderCharacters": false,
+  "gitlens.launchpad.indicator.enabled": false,
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "**/dist/",
+    "**/build/",
+    "@radix-ui/*",
+    "node:test"
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro",
+    "typescript",
+    "typescriptreact"
+  ],
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "prettier.documentSelectors": ["**/*.astro"],
+  "workbench.preferredDarkColorTheme": "Vesper",
+  "roo-cline.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ],
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "hidden",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "workbench.statusBar.visible": false,
+  "editor.fontLigatures": true,
+  "git.blame.editorDecoration.enabled": true,
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  }
+}
